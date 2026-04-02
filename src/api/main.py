@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-
 from api.models import Input
 from api.pipeline.pipeline import pipeline
 

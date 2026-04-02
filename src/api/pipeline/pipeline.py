@@ -1,6 +1,6 @@
-from api.pipeline.call_llm import call_llm
+from api.pipeline.classify import classify
 
 
 def pipeline(question: str) -> str:
-    answer = call_llm(question)
+    answer = classify(question)
     return answer
