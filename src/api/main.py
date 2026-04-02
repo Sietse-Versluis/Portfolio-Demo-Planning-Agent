@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api.models import UserInput
+from api.models import Input
 from api.pipeline.pipeline import pipeline
 
 app = FastAPI()
@@ -12,5 +12,5 @@ def read_status():
 
 
 @app.post("/api/agent/question")
-async def ask_question(body: UserInput):
+async def ask_question(body: Input):
     return pipeline(body.question)

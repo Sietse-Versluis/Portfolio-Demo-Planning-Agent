@@ -1,5 +1,6 @@
-from pydantic import BaseModel as Model
+from dataclasses import dataclass
 
 
-class UserInput(Model):
+@dataclass
+class Input:
     question: str
