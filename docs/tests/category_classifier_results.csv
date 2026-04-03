@@ -1,0 +1,33 @@
+prompt,expected,predicted,pass
+Plan a meeting with John on Friday at 2pm,calendar,calendar,PASS
+Schedule a call with the team tomorrow at 10am,calendar,calendar,PASS
+Create an event for my birthday on April 12th,calendar,calendar,PASS
+Set up a dentist appointment for next Tuesday,calendar,calendar,PASS
+Block my calendar for a deep work session on Monday morning,calendar,calendar,PASS
+Add a team lunch on Wednesday at 12:30,calendar,calendar,PASS
+Schedule a weekly standup every Monday at 9am,calendar,calendar,PASS
+Create a reminder for my project deadline on April 20th,calendar,calendar,PASS
+What meetings do I have tomorrow?,calendar,calendar,PASS
+Am I free on Friday afternoon?,calendar,calendar,PASS
+What is on my agenda this week?,calendar,calendar,PASS
+When is my next appointment?,calendar,calendar,PASS
+How late is my deadline tomorrow?,calendar,other,FAIL
+Do I have anything planned for Monday?,calendar,calendar,PASS
+What time is my meeting with Sarah?,calendar,calendar,PASS
+Cancel my appointment on Thursday,calendar,calendar,PASS
+What is the capital of France?,other,other,PASS
+Explain to me how recursion works,other,other,PASS
+How do I make pasta carbonara?,other,other,PASS
+Tell me a joke,other,other,PASS
+What is 15 times 37?,other,other,PASS
+"I have an hour free, which project should I pick up?",other,other,PASS
+What should I focus on today?,other,other,PASS
+Can you give me advice on how to be more productive?,other,other,PASS
+"I feel stuck on my work, what should I do?",other,other,PASS
+What is the weather like tomorrow?,other,other,PASS
+How do I center a div in CSS?,other,other,PASS
+What is the meaning of life?,other,other,PASS
+Who is the president of America?,other,other,PASS
+Give me tips to improve my sleep,other,other,PASS
+How late am I going to sport tomorrow?,other,other,PASS
+What should I eat for lunch?,other,other,PASS

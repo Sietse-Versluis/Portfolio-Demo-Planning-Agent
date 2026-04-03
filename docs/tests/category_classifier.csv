@@ -1,0 +1,33 @@
+prompt,expected
+"Plan a meeting with John on Friday at 2pm",calendar
+"Schedule a call with the team tomorrow at 10am",calendar
+"Create an event for my birthday on April 12th",calendar
+"Set up a dentist appointment for next Tuesday",calendar
+"Block my calendar for a deep work session on Monday morning",calendar
+"Add a team lunch on Wednesday at 12:30",calendar
+"Schedule a weekly standup every Monday at 9am",calendar
+"Create a reminder for my project deadline on April 20th",calendar
+"What meetings do I have tomorrow?",calendar
+"Am I free on Friday afternoon?",calendar
+"What is on my agenda this week?",calendar
+"When is my next appointment?",calendar
+"How late is my deadline tomorrow?",calendar
+"Do I have anything planned for Monday?",calendar
+"What time is my meeting with Sarah?",calendar
+"Cancel my appointment on Thursday",calendar
+"What is the capital of France?",other
+"Explain to me how recursion works",other
+"How do I make pasta carbonara?",other
+"Tell me a joke",other
+"What is 15 times 37?",other
+"I have an hour free, which project should I pick up?",other
+"What should I focus on today?",other
+"Can you give me advice on how to be more productive?",other
+"I feel stuck on my work, what should I do?",other
+"What is the weather like tomorrow?",other
+"How do I center a div in CSS?",other
+"What is the meaning of life?",other
+"Who is the president of America?",other
+"Give me tips to improve my sleep",other
+"How late am I going to sport tomorrow?",other
+"What should I eat for lunch?",other

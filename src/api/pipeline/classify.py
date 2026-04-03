@@ -19,7 +19,9 @@ def classify(prompt: str) -> dict:
                     "content": """You are a classifier. Return ONLY this JSON object:
 {"category": "<value>"}
 
-Possible values: "calendar", "todo", "other"
+Possible values:
+- "calendar": anything related to scheduling, creating, reading, updating or deleting events, meetings, appointments, or deadlines IN the agenda
+- "other": general questions, advice, weather, or anything not directly about managing agenda items
 """,
                 },
                 {"role": "user", "content": prompt},
@@ -34,7 +36,7 @@ Possible values: "calendar", "todo", "other"
                         "properties": {
                             "category": {
                                 "type": "string",
-                                "enum": ["calendar", "todo", "other"],
+                                "enum": ["calendar", "other"],
                             }
                         },
                         "required": ["category"],
