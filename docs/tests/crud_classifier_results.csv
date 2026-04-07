@@ -1,0 +1,33 @@
+prompt,expected,predicted,pass
+Plan a meeting with John on Friday at 2pm,create,create,PASS
+Schedule a call with the team tomorrow at 10am,create,create,PASS
+Create an event for my birthday on April 12th,create,create,PASS
+Set up a dentist appointment for next Tuesday,create,create,PASS
+Block my calendar for a deep work session on Monday morning,create,create,PASS
+Add a team lunch on Wednesday at 12:30,create,create,PASS
+Schedule a weekly standup every Monday at 9am,create,create,PASS
+Create a reminder for my project deadline on April 20th,create,create,PASS
+What meetings do I have tomorrow?,read,read,PASS
+Am I free on Friday afternoon?,read,read,PASS
+What is on my agenda this week?,read,read,PASS
+When is my next appointment?,read,read,PASS
+How late is my deadline tomorrow?,read,read,PASS
+Do I have anything planned for Monday?,read,read,PASS
+What time is my meeting with Sarah?,read,read,PASS
+Give me an overview of next week,read,read,PASS
+Move my Monday meeting to Tuesday at 3pm,update,update,PASS
+Reschedule my dentist appointment to next Wednesday,update,update,PASS
+Change the team standup to 10am instead of 9am,update,update,PASS
+Add John to my Friday meeting,update,update,PASS
+Extend my deep work block by one hour,update,update,PASS
+Change the location of tomorrow's lunch to the office,update,update,PASS
+Push my project deadline reminder one week forward,update,update,PASS
+Make my weekly standup biweekly instead,update,update,PASS
+Cancel my appointment on Thursday,delete,delete,PASS
+Remove the team lunch from Wednesday,delete,delete,PASS
+Delete all my meetings on Friday,delete,delete,PASS
+Clear my calendar for next Monday,delete,delete,PASS
+Cancel the standup series,delete,delete,PASS
+Remove John from the Friday meeting,delete,update,FAIL
+Delete my deadline reminder for April 20th,delete,delete,PASS
+Cancel everything I have planned tomorrow morning,delete,delete,PASS

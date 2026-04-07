@@ -1,0 +1,33 @@
+prompt,expected
+"Plan a meeting with John on Friday at 2pm",create
+"Schedule a call with the team tomorrow at 10am",create
+"Create an event for my birthday on April 12th",create
+"Set up a dentist appointment for next Tuesday",create
+"Block my calendar for a deep work session on Monday morning",create
+"Add a team lunch on Wednesday at 12:30",create
+"Schedule a weekly standup every Monday at 9am",create
+"Create a reminder for my project deadline on April 20th",create
+"What meetings do I have tomorrow?",read
+"Am I free on Friday afternoon?",read
+"What is on my agenda this week?",read
+"When is my next appointment?",read
+"How late is my deadline tomorrow?",read
+"Do I have anything planned for Monday?",read
+"What time is my meeting with Sarah?",read
+"Give me an overview of next week",read
+"Move my Monday meeting to Tuesday at 3pm",update
+"Reschedule my dentist appointment to next Wednesday",update
+"Change the team standup to 10am instead of 9am",update
+"Add John to my Friday meeting",update
+"Extend my deep work block by one hour",update
+"Change the location of tomorrow's lunch to the office",update
+"Push my project deadline reminder one week forward",update
+"Make my weekly standup biweekly instead",update
+"Cancel my appointment on Thursday",delete
+"Remove the team lunch from Wednesday",delete
+"Delete all my meetings on Friday",delete
+"Clear my calendar for next Monday",delete
+"Cancel the standup series",delete
+"Remove John from the Friday meeting",delete
+"Delete my deadline reminder for April 20th",delete
+"Cancel everything I have planned tomorrow morning",delete
