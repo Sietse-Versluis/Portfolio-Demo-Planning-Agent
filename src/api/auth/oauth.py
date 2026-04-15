@@ -7,7 +7,7 @@ from google_auth_oauthlib.flow import Flow
 
 load_dotenv()
 
-SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
+SCOPES = ["https://www.googleapis.com/auth/calendar"]
 REDIRECT_URI = "http://localhost:8000/auth/callback"
 TOKEN_FILE = "token.json"
 

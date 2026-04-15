@@ -1,7 +1,8 @@
 import os
 import json
 import requests
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 from api.auth.oauth import get_credentials
@@ -13,7 +14,7 @@ MAX_WINDOW_DAYS = 7
 
 
 def extract_read_params(prompt: str) -> dict:
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(ZoneInfo("Europe/Amsterdam")).isoformat()
     response = requests.post(
         LM_STUDIO_URL,
         json={
