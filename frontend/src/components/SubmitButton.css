@@ -1,0 +1,33 @@
+.submit-btn {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #16a34a;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
+  outline: none;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #15803d;
+  transform: scale(1.06);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.submit-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.submit-btn:focus-visible {
+  box-shadow: 0 0 0 3px #bbf7d0;
+}

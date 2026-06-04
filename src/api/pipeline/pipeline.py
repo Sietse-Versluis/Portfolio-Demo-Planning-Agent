@@ -1,5 +1,6 @@
 from api.pipeline.classify import classify
 from api.pipeline.calendar import classify_crud
+from api.pipeline.humanize import humanize
 from api.crud_operations.create import create
 from api.crud_operations.read import read
 from api.crud_operations.update import update
@@ -13,12 +14,17 @@ def pipeline(prompt: str):
         operation = classify_crud(prompt)
 
         if operation == "create":
-            return create(prompt)
+            result = create(prompt)
         elif operation == "read":
-            return read(prompt)
+            result = read(prompt)
         elif operation == "update":
-            return update(prompt)
+            result = update(prompt)
         elif operation == "delete":
-            return delete(prompt)
+            result = delete(prompt)
+        else:
+            result = None
+
+        if result is not None:
+            return {"message": humanize(result)}
 
     return {"message": "I can only help with calendar tasks for now."}

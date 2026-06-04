@@ -25,7 +25,9 @@ def extract_create_params(prompt: str) -> dict:
                     "content": f"""You are a calendar event parser. The current datetime in Amsterdam (Europe/Amsterdam) is {now}.
 Extract the event details from the user's request.
 Return ONLY this JSON object:
-{{"title": "<event title>", "start": "<ISO 8601 datetime>", "end": "<ISO 8601 datetime>", "description": "<description or null>", "location": "<location or null>"}}
+{{"title": "Team standup", "start": "2026-04-15T10:00:00+02:00", "end": "2026-04-15T11:00:00+02:00", "description": null, "location": null}}
+
+Fill in the actual values from the user's request. title must never be a placeholder like <meeting> — derive a short descriptive name from what the user said.
 
 Rules:
 - All times are in the Europe/Amsterdam timezone — always include the correct offset (e.g. +02:00 in summer, +01:00 in winter)

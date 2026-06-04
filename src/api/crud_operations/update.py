@@ -29,7 +29,7 @@ Return ONLY this JSON object:
 
 Rules:
 - All times are in the Europe/Amsterdam timezone — always include the correct offset (e.g. +02:00 in summer, +01:00 in winter)
-- search_query is used to find the existing event by title or keyword
+- search_query must be ONLY the short event title or a single keyword (e.g. "eating contest", "standup") — never include dates, times, or actions in search_query
 - Only include fields the user wants to change — set unchanged fields to null
 - If the user wants to change the duration (e.g. "make it 1.5 hours"), set new_duration_minutes and leave new_start and new_end null
 - If only a new start time is given and no end time, set new_end and new_duration_minutes to null (duration will be preserved)
@@ -71,12 +71,7 @@ Rules:
     return json.loads(response.json()["choices"][0]["message"]["content"])
 
 
-def update(prompt: str) -> dict:
-    params = extract_update_params(prompt)
-
-    creds = get_credentials()
-    service = build("calendar", "v3", credentials=creds)
-
+def _find_event(service, search_query: str):
     amsterdam = ZoneInfo("Europe/Amsterdam")
     now = datetime.now(amsterdam)
     events_result = (
@@ -84,22 +79,33 @@ def update(prompt: str) -> dict:
         .list(
             calendarId="primary",
             timeMin=now.isoformat(),
-            maxResults=5,
+            maxResults=20,
             singleEvents=True,
             orderBy="startTime",
-            q=params["search_query"],
         )
         .execute()
     )
-
     events = events_result.get("items", [])
-    if not events:
+    query = search_query.lower()
+    for event in events:
+        title = event.get("summary", "").lower()
+        if query in title or title in query or any(word in title for word in query.split()):
+            return event
+    return None
+
+
+def update(prompt: str) -> dict:
+    params = extract_update_params(prompt)
+
+    creds = get_credentials()
+    service = build("calendar", "v3", credentials=creds)
+
+    event = _find_event(service, params["search_query"])
+    if event is None:
         return {
             "operation": "update",
             "error": f"Geen event gevonden voor '{params['search_query']}'",
         }
-
-    event = events[0]
     original_start = event["start"].get("dateTime", event["start"].get("date"))
     original_end = event["end"].get("dateTime", event["end"].get("date"))
 

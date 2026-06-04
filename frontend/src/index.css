@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #0a0a0a;
+  --text-muted: #999;
+  --input-bg: #f0fdf4;
+  --input-border: #bbf7d0;
+  --button-bg: #16a34a;
+  --button-hover: #15803d;
+  --output-bg: #f8f8f8;
+  --radius: 999px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
